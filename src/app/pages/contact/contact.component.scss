@@ -1,0 +1,36 @@
+.contact-page {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+  
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: var(--text-color);
+        transition: color 0.2s ease;
+  
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+  

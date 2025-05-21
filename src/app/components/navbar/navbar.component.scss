@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background-color: #ffffffcc; 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-color);
+      font-size: 1rem;
+      transition: color 0.2s ease, border-bottom 0.2s ease;
+  
+      &.active,
+      &:hover {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+      }
+    }
+  }
+  

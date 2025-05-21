@@ -1,0 +1,25 @@
+.projects-page {
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+  
+    .subtext {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+  }

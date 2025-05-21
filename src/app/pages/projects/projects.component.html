@@ -1,0 +1,11 @@
+<section class="projects-page">
+  <h1>Projects</h1>
+  <p class="subtext">Here are some of the things I've built and worked on.</p>
+
+  <div class="projects-grid">
+    <app-project-card
+      *ngFor="let project of projects"
+      [project]="project"
+    ></app-project-card>
+  </div>
+</section>
