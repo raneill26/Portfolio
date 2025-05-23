@@ -1,11 +1,10 @@
 <section class="projects-page">
   <h1>Projects</h1>
-  <p class="subtext">Here are some of the projects I've built and worked on.</p>
+  <p class="subtext">Here are some of the projects I've built and contributed to</p>
 
-  <div class="projects-grid">
-    <app-project-card
-      *ngFor="let project of projects"
-      [project]="project"
-    ></app-project-card>
+  <div class="projects-list">
+    @for (project of projects; track project.title) {
+      <app-project-card [project]="project"></app-project-card>
+    }
   </div>
 </section>
