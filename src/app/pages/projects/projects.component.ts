@@ -13,9 +13,13 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Flappy Bird in MIPS Assembly',
-      description: 'A Flappy Bird clone written in MIPS for SPIM',
-      github: '#TODO',
-      tags: ['MIPS', 'SystemVerilog', 'GameDev']
+      description: 'A Flappy Bird game written in MIPS, run on a NexysA7 board using custom-built single-cycle MIPS processor',
+      github: 'https://github.com/raneill26/FlappyBird',
+      tags: ['MIPS', 'SystemVerilog', 'Hardware', 'GameDev'],
+      screenshots: [
+        'assets/projectscreenshots/Bird1.png',
+        'assets/projectscreenshots/Bird2.png',
+      ]
     },
     {
       title: 'AInterviewer',
@@ -41,7 +45,7 @@ export class ProjectsComponent {
     {
       title: 'Ethics of AI',
       description: 'Research',
-      github: '#TODO',
+      github: 'https://github.com/raneill26/Ethics-of-AI',
       tags: ['Research', 'AI', 'Team Project']
     },
     {

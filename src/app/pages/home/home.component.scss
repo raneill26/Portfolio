@@ -1,4 +1,4 @@
-.home-hero {
+.home-page {
   position: relative;
   background: var(--bg-color);
   background: linear-gradient(to bottom, var(--bg-color), #eae1d8);
@@ -88,6 +88,10 @@
         }
       }
     }
+  }
+  
+  .spacer {
+  height: 45px;
   }
 }
 

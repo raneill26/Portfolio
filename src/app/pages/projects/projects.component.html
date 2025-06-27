@@ -3,8 +3,11 @@
   <p class="subtext">Here are some of the projects I've built and contributed to</p>
 
   <div class="projects-list">
-    @for (project of projects; track project.title) {
-      <app-project-card [project]="project"></app-project-card>
+    @for (project of projects; let i = $index; track project.title) {
+      <app-project-card 
+        [project]="project"
+        [style.animation-delay]="(i * 100) + 'ms'"
+      ></app-project-card>
     }
   </div>
 </section>
