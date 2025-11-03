@@ -37,14 +37,8 @@ export class ProjectsComponent {
       ]
     },
     {
-      title: 'Linux Shell',
-      description: 'To do',
-      github: '#TODO',
-      tags: ['Java', 'Linux', 'Shell']
-    },
-    {
       title: 'Ethics of AI',
-      description: 'Research',
+      description: 'A two-part study analyzing bias in generative AI systems',
       github: 'https://github.com/raneill26/Ethics-of-AI',
       tags: ['Research', 'AI', 'Team Project']
     },
@@ -58,12 +52,6 @@ export class ProjectsComponent {
         'assets/projectscreenshots/Akari3.png',
         'assets/projectscreenshots/Akari1.png'
       ]
-    },
-    {
-      title: 'IsItTargeting.com',
-      description: 'Website',
-      github: '#TODO',
-      tags: ['Angular', 'TypeScript', 'Frontend', 'Backend']
     }
   ];
 }
