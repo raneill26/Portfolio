@@ -171,12 +171,7 @@
 
 .skill-card h3 {
   margin-bottom: 1.1rem;
-  font-size: 0.775rem;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--accent-200);
+  font-size: 1.05rem;
 }
 
 .skill-list {
@@ -200,8 +195,16 @@
 }
 
 .edu-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.14rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.25rem;
+}
+
+.edu-school {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  font-weight: 550;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
 }
 
 .edu-degree {
