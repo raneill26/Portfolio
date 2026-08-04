@@ -42,11 +42,13 @@
 
     <aside class="hero-card glass" appReveal [revealDelay]="140">
       <div class="portrait">
-        @if (photoFailed()) {
-          <div class="portrait-fallback" aria-hidden="true">RN</div>
-        } @else {
-          <img src="assets/pfp.jpg" alt="Portrait of Ryan Neill" (error)="onPhotoError()" />
-        }
+        <div class="portrait-frame">
+          @if (photoFailed()) {
+            <div class="portrait-fallback" aria-hidden="true">RN</div>
+          } @else {
+            <img src="assets/headshot.png" alt="Portrait of Ryan Neill" (error)="onPhotoError()" />
+          }
+        </div>
         <span class="portrait-ring" aria-hidden="true"></span>
       </div>
 

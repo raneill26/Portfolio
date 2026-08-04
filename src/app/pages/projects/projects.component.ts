@@ -84,8 +84,7 @@ export class ProjectsComponent {
       tags: ['Java', 'JavaFX', 'Game Dev'],
       screenshots: [
         'assets/projectscreenshots/Akari2.png',
-        'assets/projectscreenshots/Akari3.png',
-        'assets/projectscreenshots/Akari1.png'
+        'assets/projectscreenshots/Akari3.png'
       ]
     },
     {
