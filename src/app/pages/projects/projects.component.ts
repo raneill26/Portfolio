@@ -1,31 +1,52 @@
 import { Component } from '@angular/core';
-import { ProjectCardComponent } from '../../components/project-card/project-card.component';
-import { NgFor } from '@angular/common';
+import { ProjectCardComponent, Project } from '../../components/project-card/project-card.component';
+import { RevealDirective } from '../../shared/reveal.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent],
+  imports: [ProjectCardComponent, RevealDirective],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  projects = [
+  readonly projects: Project[] = [
     {
-      title: 'Flappy Bird in MIPS Assembly',
-      description: 'A Flappy Bird game written in MIPS, run on a NexysA7 board using custom-built single-cycle MIPS processor',
-      github: 'https://github.com/raneill26/FlappyBird',
-      tags: ['MIPS', 'SystemVerilog', 'Hardware', 'GameDev'],
+      title: 'Drinko',
+      subtitle: 'Native iOS · in active development',
+      description:
+        'A social drink tracker for iOS. Drinko pairs a real-time blood alcohol estimator with the parts of a night out people actually want to share — group sessions, running tallies, and a tournament bracket engine for whatever game is on the table.',
+      status: 'In development',
+      featured: true,
+      year: '2026',
+      tags: ['Swift', 'SwiftData', 'HealthKit', 'StoreKit', 'iOS'],
+      highlights: [
+        'Real-time BAC estimation using the Widmark formula, driven by HealthKit biometrics and a live drink log.',
+        'Tournament bracket engine for group games — seeding, progression, and results persisted with SwiftData.',
+        'Offline-first local persistence layer so the app stays accurate without a network connection.',
+        'Subscription tier built on StoreKit, with an entitlement model gating premium tracking features.'
+      ],
+      // Drop Drinko screenshots into src/assets/drinko/ and list them here.
+      // Any path that fails to load is skipped automatically, so it is safe to
+      // add filenames before the images are in place.
       screenshots: [
-        'assets/projectscreenshots/Bird1.png',
-        'assets/projectscreenshots/Bird2.png',
+        // 'assets/drinko/drinko1.png',
+        // 'assets/drinko/drinko2.png',
       ]
     },
     {
       title: 'AInterviewer',
-      description: 'AI-assisted problem solving interface for CS students',
+      subtitle: 'Full-stack web platform',
+      description:
+        'An AI-assisted technical interview trainer built with a team and integrated into the UNC Computer Science department site. Students work real interview problems and get scaffolded hints and feedback instead of an answer key.',
       github: 'https://github.com/raneill26/AInterview',
-      tags: ['Angular', 'FastAPI', 'SQL', 'Team Project'],
+      year: '2025',
+      tags: ['Angular', 'FastAPI', 'TypeScript', 'SQL', 'Team Project'],
+      highlights: [
+        'Student workspace for selecting, attempting, and submitting interview questions.',
+        'AI feedback layer that returns progressive hints rather than solutions.',
+        'Admin console for creating, editing, and curating the question bank.'
+      ],
       screenshots: [
         'assets/projectscreenshots/AI1studentmainview.png',
         'assets/projectscreenshots/AI2selectedquestion.png',
@@ -33,25 +54,48 @@ export class ProjectsComponent {
         'assets/projectscreenshots/AI4asked.png',
         'assets/projectscreenshots/AI5adminview.png',
         'assets/projectscreenshots/AI6create.png',
-        'assets/projectscreenshots/AI7edit.png',
+        'assets/projectscreenshots/AI7edit.png'
       ]
     },
     {
-      title: 'Ethics of AI',
-      description: 'A two-part study analyzing bias in generative AI systems',
-      github: 'https://github.com/raneill26/Ethics-of-AI',
-      tags: ['Research', 'AI', 'Team Project']
+      title: 'Flappy Bird in MIPS Assembly',
+      subtitle: 'Hardware + bare-metal game',
+      description:
+        'Flappy Bird written in MIPS assembly and run on a Nexys A7 FPGA board — executing on a single-cycle MIPS processor I built from scratch in SystemVerilog.',
+      github: 'https://github.com/raneill26/FlappyBird',
+      year: '2025',
+      tags: ['MIPS', 'SystemVerilog', 'FPGA', 'Game Dev'],
+      highlights: [
+        'Custom single-cycle MIPS processor implemented in SystemVerilog.',
+        'Game loop, collision, and VGA rendering written directly in assembly.'
+      ],
+      screenshots: [
+        'assets/projectscreenshots/Bird1.png',
+        'assets/projectscreenshots/Bird2.png'
+      ]
     },
     {
-      title: 'Akari in Java',
-      description: 'JavaFX-based implementation of the game Akari',
+      title: 'Akari',
+      subtitle: 'JavaFX puzzle game',
+      description:
+        'A complete JavaFX implementation of Akari (Light Up), including the puzzle model, constraint validation, and an interactive board with live solution checking.',
       github: 'https://github.com/raneill26/Akari',
-      tags:['Java', 'GameDev'],
+      year: '2024',
+      tags: ['Java', 'JavaFX', 'Game Dev'],
       screenshots: [
         'assets/projectscreenshots/Akari2.png',
         'assets/projectscreenshots/Akari3.png',
         'assets/projectscreenshots/Akari1.png'
       ]
+    },
+    {
+      title: 'Ethics of AI',
+      subtitle: 'Research study',
+      description:
+        'A two-part study analyzing bias in generative AI systems — how it surfaces in model output, and what that means for the people deploying these tools.',
+      github: 'https://github.com/raneill26/Ethics-of-AI',
+      year: '2024',
+      tags: ['Research', 'AI Ethics', 'Team Project']
     }
   ];
 }

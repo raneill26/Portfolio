@@ -1,13 +1,19 @@
-<section class="projects-page">
-  <h1>Projects</h1>
-  <p class="subtext">Here are some of the projects I've built and contributed to</p>
+<section class="projects-hero shell" appReveal>
+  <span class="eyebrow">Projects</span>
+  <h1>Things I've built.</h1>
+  <p class="lede">
+    Compensation systems pay the bills. These are the projects I build because the problem was
+    interesting — from a bare-metal game running on an FPGA to a native iOS app currently in
+    development.
+  </p>
+</section>
 
-  <div class="projects-list">
-    @for (project of projects; let i = $index; track project.title) {
-      <app-project-card 
-        [project]="project"
-        [style.animation-delay]="(i * 100) + 'ms'"
-      ></app-project-card>
-    }
-  </div>
+<section class="projects-list shell">
+  @for (project of projects; track project.title; let i = $index) {
+    <app-project-card
+      [project]="project"
+      appReveal
+      [revealDelay]="i * 90"
+    ></app-project-card>
+  }
 </section>

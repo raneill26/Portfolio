@@ -1,16 +1,131 @@
-<section class="home-page">
-  <img src="assets/pfp.jpg" alt="Photo of Ryan" class="profile-photo" />
+<section class="hero shell">
+  <div class="hero-grid">
+    <div class="hero-copy" appReveal>
+      <span class="status-pill">
+        <span class="pulse" aria-hidden="true"></span>
+        Founding Associate Consultant &#64; Variable Sync
+      </span>
 
-  <h1>Hey, I'm Ryan</h1>
-  <h2 class="tagline">Computer Science Student & Developer</h2>
-  <p class="intro">
-    I build software, design digital experiences, and enjoy solving challenging problems.
-    Currently, I am studying CS at UNC Chapel Hill, with experience in Python, Angular, MIPS, FastAPI, and more.
-  </p>
-  <div class="home-buttons">
-    <a routerLink="/projects" class="btn" routerLinkActive="active">View My Projects</a>
-    <a routerLink="/about" class="btn secondary" routerLinkActive="active">Learn More</a>
+      <h1>
+        Hey, I'm <span class="gradient-text">Ryan</span>.<br />
+        I build systems that<br class="br-lg" /> hold up under scrutiny.
+      </h1>
+
+      <p class="lede hero-lede">
+        UNC Chapel Hill computer science graduate working at the seam where revenue operations
+        meets engineering — incentive compensation architecture, data pipelines, and the
+        occasional iOS app built on nights and weekends.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/projects" class="btn btn-primary">
+          View my work
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+        <a href="assets/Ryan_Neill_Resume.pdf" target="_blank" rel="noopener" class="btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
+          Résumé
+        </a>
+        <a routerLink="/contact" class="btn">Get in touch</a>
+      </div>
+
+      <ul class="stack-strip" aria-label="Core technologies">
+        @for (item of stack; track item) {
+          <li class="chip">{{ item }}</li>
+        }
+      </ul>
+    </div>
+
+    <aside class="hero-card glass" appReveal [revealDelay]="140">
+      <div class="portrait">
+        @if (photoFailed()) {
+          <div class="portrait-fallback" aria-hidden="true">RN</div>
+        } @else {
+          <img src="assets/pfp.jpg" alt="Portrait of Ryan Neill" (error)="onPhotoError()" />
+        }
+        <span class="portrait-ring" aria-hidden="true"></span>
+      </div>
+
+      <p class="card-name">Ryan Neill</p>
+      <p class="card-meta">Durham, North Carolina</p>
+
+      <ul class="highlights">
+        @for (h of highlights; track h.label) {
+          <li [class.is-link]="!!h.href">
+            @if (h.href) {
+              <a [href]="h.href" target="_blank" rel="noopener">
+                <span class="hl-icon" aria-hidden="true">
+                  @switch (h.icon) {
+                    @case ('github') {
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                      </svg>
+                    }
+                    @case ('linkedin') {
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.6 8.75 23 11 23 14.3V21h-4v-5.9c0-1.4-.03-3.2-2-3.2-2 0-2.3 1.53-2.3 3.1V21h-4V9Z" />
+                      </svg>
+                    }
+                  }
+                </span>
+                <span class="hl-text">
+                  <span class="hl-name">{{ h.value }}</span>
+                  <span class="hl-handle">{{ h.label }}</span>
+                </span>
+                <svg class="hl-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
+            } @else {
+              <span class="hl-value">{{ h.value }}</span>
+              <span class="hl-label">{{ h.label }}</span>
+            }
+          </li>
+        }
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="focus-section shell">
+  <div class="section-head" appReveal>
+    <span class="eyebrow">What I'm working on</span>
+    <h2>Three things I keep coming back to</h2>
   </div>
 
-  <div class="spacer"></div>
-  </section>
+  <div class="focus-grid">
+    @for (f of focus; track f.title; let i = $index) {
+      <article class="focus-card glass glass-hover" appReveal [revealDelay]="i * 110">
+        <span class="focus-index" aria-hidden="true">0{{ i + 1 }}</span>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.body }}</p>
+        <ul class="focus-stack">
+          @for (s of f.stack; track s) {
+            <li class="chip">{{ s }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="cta-section shell" appReveal>
+  <div class="cta glass">
+    <div>
+      <h2>Contact me</h2>
+      <p class="lede">
+        Open to interesting problems in RevOps tooling, data infrastructure, and product engineering.
+      </p>
+    </div>
+    <a routerLink="/contact" class="btn btn-primary">
+      Start a conversation
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </a>
+  </div>
+</section>

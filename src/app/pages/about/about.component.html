@@ -1,32 +1,108 @@
-<section class="about-page">
-    <h1>About Me</h1>
-    <p class="bio">
-      I'm Ryan, a Computer Science student at UNC Chapel Hill. I enjoy building creative, functional software and exploring both low-level systems (like MIPS) and modern web technologies (like Angular and TypeScript).
+<section class="about-hero shell" appReveal>
+  <span class="eyebrow">About</span>
+  <h1>Systems thinking,<br />shipped as software.</h1>
+
+  <div class="bio glass">
+    <p>
+      I'm Ryan — a computer science graduate from UNC Chapel Hill, now working as a founding
+      associate consultant at Variable Sync. Most of my day is spent inside incentive compensation
+      systems: turning a sales plan written in prose into crediting rules, quotas, and payout logic
+      that has to be correct to the cent and defensible to an auditor.
     </p>
-  
-    <div class="info-blocks">
-      <div class="info">
-        <h3>Education</h3>
-        <li>B.A. in Computer Science, UNC Chapel Hill</li>
-        <li>Minor in Data Science</li>
-        <li>Minor in History</li>
-      </div>
-  
-      <div class="info">
-        <h3>Skills</h3>
-        <ul>
-          <li>Angular, TypeScript, HTML/CSS</li>
-          <li>Python, FastAPI, SQLAlchemy</li>
-          <li>MIPS Assembly, SystemVerilog</li>
-          <li>Git, GitHub, REST APIs</li>
-          <li>Robotics, Kinematics</li>
+    <p>
+      That work sits on top of the same instincts I built writing MIPS assembly and JavaFX games in
+      school — understand the constraints, model the problem cleanly, then test it until it stops
+      surprising you. Outside of work I build products end to end, most recently a native iOS app
+      called Drinko.
+    </p>
+  </div>
+</section>
+
+<section class="section shell">
+  <div class="section-head" appReveal>
+    <span class="eyebrow">Experience</span>
+    <h2>Where I've worked</h2>
+  </div>
+
+  <ol class="timeline">
+    @for (role of roles; track role.org; let i = $index) {
+      <li class="timeline-item" appReveal [revealDelay]="i * 100">
+        <span class="node" [class.current]="role.current" aria-hidden="true"></span>
+
+        <div class="role glass glass-hover">
+          <header class="role-head">
+            <div>
+              <h3>{{ role.title }}</h3>
+              <p class="role-org">
+                {{ role.org }}
+                <span class="sep" aria-hidden="true">·</span>
+                <span class="role-loc">{{ role.location }}</span>
+              </p>
+            </div>
+            <span class="period" [class.current]="role.current">{{ role.period }}</span>
+          </header>
+
+          <ul class="role-points">
+            @for (point of role.points; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+        </div>
+      </li>
+    }
+  </ol>
+</section>
+
+<section class="section shell">
+  <div class="section-head" appReveal>
+    <span class="eyebrow">Toolkit</span>
+    <h2>What I work with</h2>
+  </div>
+
+  <div class="skills-grid">
+    @for (group of skillGroups; track group.label; let i = $index) {
+      <article class="skill-card glass glass-hover" appReveal [revealDelay]="i * 90">
+        <h3>{{ group.label }}</h3>
+        <ul class="skill-list">
+          @for (item of group.items; track item) {
+            <li class="chip">{{ item }}</li>
+          }
         </ul>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="section shell">
+  <div class="edu-grid">
+    <article class="glass edu-card" appReveal>
+      <span class="eyebrow">Education</span>
+      <h3>University of North Carolina at Chapel Hill</h3>
+      <p class="edu-degree">B.A. Computer Science · Minors in Data Science and History</p>
+      <p class="edu-date">Chapel Hill, NC · May 2026</p>
+
+      <p class="sub-label">Relevant coursework</p>
+      <ul class="skill-list">
+        @for (course of coursework; track course) {
+          <li class="chip">{{ course }}</li>
+        }
+      </ul>
+    </article>
+
+    <article class="glass edu-card" appReveal [revealDelay]="120">
+      <span class="eyebrow">Activities &amp; honors</span>
+      <ul class="activity-list">
+        @for (activity of activities; track activity) {
+          <li>{{ activity }}</li>
+        }
+      </ul>
+
+      <div class="about-actions">
+        <a href="assets/Ryan_Neill_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+          Download résumé
+        </a>
+        <a routerLink="/projects" class="btn">See projects</a>
       </div>
-  
-      <div class="info">
-        <h3>Interests</h3>
-        <p>Game development, robotics, hardware hacking, sound design, AI ethics, and education.</p>
-      </div>
-    </div>
-  </section>
-  
+    </article>
+  </div>
+</section>
