@@ -57,17 +57,17 @@ export class HomeComponent {
   readonly focus: Focus[] = [
     {
       title: 'Compensation systems',
-      body: 'Translating go-to-market plans into crediting logic, quotas, and variable incentives inside CaptivateIQ — built to survive an audit.',
+      body: 'Translating go-to-market plans into crediting logic, quotas, and variable incentives inside CaptivateIQ',
       stack: ['CaptivateIQ', 'SQL', 'UAT']
     },
     {
       title: 'Data pipelines',
-      body: 'Python ETL and BigQuery schemas that consolidate messy transactional sources into something a business can actually trust.',
+      body: 'Python ETL and BigQuery schemas that consolidate messy transactional sources into something a business trusts',
       stack: ['Python', 'BigQuery', 'ETL']
     },
     {
       title: 'Product engineering',
-      body: 'Shipping real apps end to end — currently Drinko, a native iOS social drink tracker with a live BAC model.',
+      body: 'Development for Drinko, an iOS app designed to help users responsibly track their alcoholic drink intake',
       stack: ['Swift', 'SwiftData', 'HealthKit']
     }
   ];
