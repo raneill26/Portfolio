@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RevealDirective } from '../../shared/reveal.directive';
 
 interface Highlight {
-  /** Short label shown in the left column, or an icon key for social rows. */
+  /** Primary line — org or platform name. */
   value: string;
+  /** Secondary line — handle, URL, or detail. */
   label: string;
-  icon?: 'github' | 'linkedin';
+  icon: 'oldwell' | 'github' | 'linkedin';
+  /** Present on rows that link out; omitted rows render as static info. */
   href?: string;
 }
 
@@ -19,7 +22,7 @@ interface Focus {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, RevealDirective],
+  imports: [RouterLink, RevealDirective, NgTemplateOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -39,7 +42,11 @@ export class HomeComponent {
   ];
 
   readonly highlights: Highlight[] = [
-    { value: 'UNC', label: 'B.A. Computer Science, 2026' },
+    {
+      value: 'UNC Chapel Hill',
+      label: 'B.A. Computer Science, 2026',
+      icon: 'oldwell'
+    },
     {
       value: 'GitHub',
       label: 'github.com/raneill26',
