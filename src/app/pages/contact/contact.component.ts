@@ -43,7 +43,7 @@ export class ContactComponent {
     },
     {
       icon: 'resume',
-      label: 'Résumé',
+      label: 'Resume',
       value: 'Download PDF',
       href: 'assets/Ryan_Neill_Resume.pdf',
       external: true
