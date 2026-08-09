@@ -28,8 +28,12 @@ export class ProjectsComponent {
       ],
       // FUTURE SCREENSHOTS
       screenshots: [
-        // 'assets/drinko/drinko1.png',
-        // 'assets/drinko/drinko2.png',
+        'assets/projectscreenshots/Drinko1.jpg',
+        'assets/projectscreenshots/Drinko2.jpg',
+        'assets/projectscreenshots/Drinko3.jpg',
+        'assets/projectscreenshots/Drinko4.jpg',
+        'assets/projectscreenshots/Drinko5.jpg',
+        'assets/projectscreenshots/Drinko6.jpg'
       ]
     },
     {
