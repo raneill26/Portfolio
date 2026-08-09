@@ -32,7 +32,7 @@ export class AboutComponent {
       period: '2026 — Present',
       current: true,
       points: [
-        'Translate go-to-market strategy into system rules — crediting logic, quotas, and variable incentives configured in CaptivateIQ and other enterprise ICM platforms.',
+        'Translate go-to-market strategy into system rules. Crediting logic, quotas, and variable incentives configured in CaptivateIQ and other enterprise ICM platforms.',
         'Own ingestion, transformation, and validation of large transactional pipelines, maintaining backend schemas, user hierarchies, and territory alignments.',
         'Run end-to-end QA and unit testing in an agile SDLC, debugging calculation errors toward zero-defect, SOX-compliant commission deployments.',
         'Standardize internal build processes and author configuration guides so systems stay maintainable after handoff.'
@@ -116,7 +116,7 @@ export class AboutComponent {
   ];
 
   readonly activities = [
-    'Pi Kappa Phi Fraternity — Philanthropy Board Member (2024–2026)',
+    'Pi Kappa Phi Fraternity - Philanthropy Board Member (2024–2026)',
     'Carolina Data Science Club (2024–2026)'
   ];
 }

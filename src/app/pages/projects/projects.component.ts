@@ -15,20 +15,18 @@ export class ProjectsComponent {
       title: 'Drinko',
       subtitle: 'Native iOS · in active development',
       description:
-        'A social drink tracker for iOS. Drinko pairs a real-time blood alcohol estimator with the parts of a night out people actually want to share — group sessions, running tallies, and a tournament bracket engine for whatever game is on the table.',
+        'A social drink tracker for iOS. Drinko offers a real-time blood alcohol estimator along with a drink tracker to monitor your night out. Additionally group planning, running tallies, and a game tournament bracket engine are available for friends to interact with eachother.',
       status: 'In development',
       featured: true,
       year: '2026',
       tags: ['Swift', 'SwiftData', 'HealthKit', 'StoreKit', 'iOS'],
       highlights: [
-        'Real-time BAC estimation using the Widmark formula, driven by HealthKit biometrics and a live drink log.',
-        'Tournament bracket engine for group games — seeding, progression, and results persisted with SwiftData.',
+        'Real-time BAC estimation using the Widmark formula, calculated by HealthKit biometrics and a live drink log.',
+        'Tournament bracket engine for group games. Seeding, progression, and results persisted with SwiftData.',
         'Offline-first local persistence layer so the app stays accurate without a network connection.',
         'Subscription tier built on StoreKit, with an entitlement model gating premium tracking features.'
       ],
-      // Drop Drinko screenshots into src/assets/drinko/ and list them here.
-      // Any path that fails to load is skipped automatically, so it is safe to
-      // add filenames before the images are in place.
+      // FUTURE SCREENSHOTS
       screenshots: [
         // 'assets/drinko/drinko1.png',
         // 'assets/drinko/drinko2.png',
@@ -61,12 +59,12 @@ export class ProjectsComponent {
       title: 'Flappy Bird in MIPS Assembly',
       subtitle: 'Hardware + bare-metal game',
       description:
-        'Flappy Bird written in MIPS assembly and run on a Nexys A7 FPGA board — executing on a single-cycle MIPS processor I built from scratch in SystemVerilog.',
+        'Flappy Bird written in MIPS assembly and run on a Nexys A7 FPGA board. Executing on a single-cycle MIPS processor I built from scratch in SystemVerilog.',
       github: 'https://github.com/raneill26/FlappyBird',
       year: '2025',
       tags: ['MIPS', 'SystemVerilog', 'FPGA', 'Game Dev'],
       highlights: [
-        'Custom single-cycle MIPS processor implemented in SystemVerilog.',
+        'Custom single cycle MIPS processor implemented in SystemVerilog.',
         'Game loop, collision, and VGA rendering written directly in assembly.'
       ],
       screenshots: [
